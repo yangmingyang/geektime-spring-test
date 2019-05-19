@@ -64,7 +64,7 @@ public class MultiDataSourceApplication {
 	@Bean
 	public DataSource barDataSource(){
 		DataSourceProperties dataSourceProperties = barDataSourceProperties();
-		log.info("我来初始化调用bar2：DataSourceProperties" );
+		log.info("我来初始化调用bar：DataSourceProperties" );
 		log.info("====bar datasource:{}"+dataSourceProperties.getUrl());
 		return dataSourceProperties.initializeDataSourceBuilder().build();
 	}
