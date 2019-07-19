@@ -2,10 +2,13 @@ package com.mingyang.lambda.main;
 
 import com.mingyang.lambda.Interfaces.Impl.Father;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class testInterface01 {
     /**
      * 如何调用匿名的函数方法？
-     * 使用场景：比如要打印一个日志，日志是有级别的，但日志的级别是1的时候，才可以打印，如何实现该功能
+     * 重点来了：能够使用Lambda的依据是必须有相应的函数接口（函数接口，是指内部只有一个抽象方法的接口
      *
      * @param args
      */
@@ -22,9 +25,7 @@ public class testInterface01 {
                 System.out.println("my会说");
             }
         }.speak();
-        /*String msg1="hello";
-        String msg2="java";
-        String msg3="lambda";*/
+
         /**
          * 线程的这个写法，实际上就是往对象里传一个对象，然后我们传的实现内部类方法的对象而已
          */
@@ -43,6 +44,7 @@ public class testInterface01 {
             }
         }).start();
 
+        //思考lambda表达式中（）代表的是什么？从当前的现象来看，（）代表的是一个对象
         new Thread(()-> System.out.println("线程3")).start();
 
         //如果方法内容很多，那么就应该要加一个中括号
