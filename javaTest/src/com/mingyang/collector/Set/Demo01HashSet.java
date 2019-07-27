@@ -17,7 +17,7 @@ import java.util.Set;
  *      3.是一个无序的集合，存储元素和取出的元素的顺序有可能不一样
  *      4.底层是一个哈希表结构（查询的速度非常的快）
  */
-public class Demo01Set {
+public class Demo01HashSet {
 
     @Test
     public void demo1(){
