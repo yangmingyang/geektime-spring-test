@@ -22,7 +22,7 @@ import java.util.Map;
  *      1.LinkedHashMap集合底层是一个哈希表+链表（保证迭代的顺序）
  *      2.LinkedHashMap集合是一个有序的集合，存储元素和取出元素的顺序是一致的
  */
-public class Demo01Map {
+public class Demo01HashMap {
 
 
     @Test
