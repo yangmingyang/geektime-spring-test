@@ -43,4 +43,15 @@ public class Demo01File {
         String separator = File.separator;
         System.out.println(separator);//反斜杠\    文件名称分隔符 window：反斜杠\   linux:正斜杠/
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 0b0bd87ce83fd7411bf908d07ea4d9f112d6fe42
 }
