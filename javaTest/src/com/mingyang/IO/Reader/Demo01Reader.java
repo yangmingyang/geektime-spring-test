@@ -42,7 +42,7 @@ public class Demo01Reader {
         while ((len=fileReader.read())!=-1){
             System.out.println((char) len);
         }*/
-        //如果文件比较大，那可以定义一次读过个字符，继续优化
+        //如果文件比较大，那可以定义一次读多个字符，继续优化
         int len ;
         char[] chars = new char[1024];
         while ((len=fileReader.read(chars))!=-1){
