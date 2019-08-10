@@ -1,4 +1,4 @@
-package com.net.TCP;
+package com.mingyang.TCP;
 
 import org.junit.Test;
 
