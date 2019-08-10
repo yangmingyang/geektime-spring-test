@@ -11,8 +11,15 @@ public class Person {
     public Person() {
     }
 
-    public Person(Integer id, String name) {
+    /**
+     *  把构造方法改成私有的
+     */
+    private Person(Integer id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public Person(String name) {
         this.name = name;
     }
 
@@ -74,5 +81,17 @@ public class Person {
 
     public void setD(String d) {
         this.d = d;
+    }
+
+    public void eat(){
+        System.out.println("eat....");
+    }
+
+    public void eat(String food){
+        System.out.println("eat..."+food);
+    }
+
+    private void eat(String name,String food){
+        System.out.println(name+"==="+food);
     }
 }

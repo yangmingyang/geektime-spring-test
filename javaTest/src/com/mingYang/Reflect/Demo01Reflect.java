@@ -63,41 +63,4 @@ public class Demo01Reflect {
         System.out.println(aClass==p.getClass());
 
     }
-
-    /**
-     * 获取成员变量的方式
-     */
-    @Test
-    public void field() throws NoSuchFieldException {
-        Class<Person> personClass = Person.class;
-        //Field[] getFields() :获取所有public修饰的成员变量；
-        Field[] fields = personClass.getFields();
-        for (Field f : fields){
-            System.out.println(f);//public java.lang.String com.mingYang.Reflect.domain.Person.a
-        }
-        System.out.println("==getField==============================");
-
-        //Field getField(String name) ：获取指定名称的public修饰的成员变量；
-        Field a = personClass.getField("a");
-        System.out.println(a);//public java.lang.String com.mingYang.Reflect.domain.Person.a
-
-        System.out.println("==getDeclaredFields==============================");
-        //Field[] getDeclaredFields() :获取所有的成员变量，不考虑修饰符
-        Field[] declaredFields = personClass.getDeclaredFields();
-        for (Field dfd : declaredFields){
-            System.out.println(dfd);
-            /**
-             * 结果：把所有的成员变量都打印出来了
-             * private java.lang.Integer com.mingYang.Reflect.domain.Person.id
-             * private java.lang.String com.mingYang.Reflect.domain.Person.name
-             * public java.lang.String com.mingYang.Reflect.domain.Person.a
-             * protected java.lang.String com.mingYang.Reflect.domain.Person.b
-             * java.lang.String com.mingYang.Reflect.domain.Person.c
-             * private java.lang.String com.mingYang.Reflect.domain.Person.d
-             */
-        }
-
-        System.out.println("===================================");
-        //Field getDeclaredField(String name) ：获取指定名称的成员变量，不考虑修饰符
-    }
 }
