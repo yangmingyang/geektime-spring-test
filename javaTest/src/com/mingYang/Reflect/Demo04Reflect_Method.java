@@ -8,11 +8,11 @@ import java.lang.reflect.Method;
 
 /**
  *  获取成员方法们：
- *      Method[] getMethods()：获取所有public修饰的成员方法；
- *      Method getMethod(String name,类<？>... parameterTypes)：获取指定参数public修饰的成员方法；
+ *      Method_Serializable[] getMethods()：获取所有public修饰的成员方法；
+ *      Method_Serializable getMethod(String name,类<？>... parameterTypes)：获取指定参数public修饰的成员方法；
  *
- *      Method[] getDeclaredMethods()：取所有的成员方法，不考虑修饰符
- *      Method getDeclaredMethod(String name,类<？>...parameterTypes)：取指定的成员方法，不考虑修饰符
+ *      Method_Serializable[] getDeclaredMethods()：取所有的成员方法，不考虑修饰符
+ *      Method_Serializable getDeclaredMethod(String name,类<？>...parameterTypes)：取指定的成员方法，不考虑修饰符
  *
  *  思考：获取方法，我们有什么作用呢？
  *      答：获取到方法，就是要调用执行方法。
@@ -20,13 +20,13 @@ import java.lang.reflect.Method;
  */
 public class Demo04Reflect_Method {
     /**
-     *  Method getMethod(String name,类<？>... parameterTypes)：获取指定参数public修饰的成员方法；
+     *  Method_Serializable getMethod(String name,类<？>... parameterTypes)：获取指定参数public修饰的成员方法；
      */
     @Test
     public void getMethodTest() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Class<Person> personClass = Person.class;
         //获取的是一个无参数的方法
-        /* Method eat = personClass.getMethod("eat");
+        /* Method_Serializable eat = personClass.getMethod("eat");
         Person p = new Person();
         eat.invoke(p);*/
 
@@ -36,7 +36,7 @@ public class Demo04Reflect_Method {
     }
 
     /**
-     * Method getMethod(String name,类<？>... parameterTypes)：获取指定参数public修饰的成员方法；
+     * Method_Serializable getMethod(String name,类<？>... parameterTypes)：获取指定参数public修饰的成员方法；
      */
     @Test
     public void getMethodsTest(){
@@ -54,7 +54,7 @@ public class Demo04Reflect_Method {
     }
 
     /**
-     * Method getDeclaredMethod(String name,类<？>...parameterTypes)：取指定的成员方法，不考虑修饰符
+     * Method_Serializable getDeclaredMethod(String name,类<？>...parameterTypes)：取指定的成员方法，不考虑修饰符
      */
     @Test
     public void getDeclaredMethodMethod() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
@@ -67,7 +67,7 @@ public class Demo04Reflect_Method {
     }
 
     /**
-     * Method[] getDeclaredMethods()：取所有的成员方法，不考虑修饰符
+     * Method_Serializable[] getDeclaredMethods()：取所有的成员方法，不考虑修饰符
      */
     @Test
     public void getDeclaredMethodsTest(){

@@ -39,11 +39,11 @@ import java.lang.reflect.Field;
  *          Constructor<?>[] getDeclaredConstructors()
  *
  *      3.获取成员方法们：
- *          Method[] getMethods()
- *          Method getMethod(String name,类<？>... parameterTypes)
+ *          Method_Serializable[] getMethods()
+ *          Method_Serializable getMethod(String name,类<？>... parameterTypes)
  *
- *          Method[] getDeclaredMethods()
- *          Method getDeclaredMethod(String name,类<？>...parameterTypes)
+ *          Method_Serializable[] getDeclaredMethods()
+ *          Method_Serializable getDeclaredMethod(String name,类<？>...parameterTypes)
  *
  *      4.获取类名
  *          String getName()

@@ -1,6 +1,6 @@
 package com.mingYang.IO.ObjectStream;
 
-import com.mingYang.IO.ObjectStream.vo.Method;
+import com.mingYang.IO.ObjectStream.vo.Method_Serializable;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -37,7 +37,7 @@ public class Demo02ObjectInputStream {
         //1.创建ObjectInputStream对象，构造方法中传递字节输入流。
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\personalDoc\\2019\\August\\object.txt"));
         //2.使用ObjectInputStream对象中readObject方法读取保存对象的文件。
-        Method o = (Method) ois.readObject();
+        Method_Serializable o = (Method_Serializable) ois.readObject();
         //3.释放资源
         ois.close();
         //4.使用读取出来的对象（打印）

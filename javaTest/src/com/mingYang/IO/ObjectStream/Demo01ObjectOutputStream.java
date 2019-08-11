@@ -1,6 +1,6 @@
 package com.mingYang.IO.ObjectStream;
 
-import com.mingYang.IO.ObjectStream.vo.Method;
+import com.mingYang.IO.ObjectStream.vo.Method_Serializable;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -27,7 +27,7 @@ import java.io.ObjectOutputStream;
 public class Demo01ObjectOutputStream {
     public static void main(String[] args) throws IOException {
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\personalDoc\\2019\\August\\object.txt"));
-        Method method = new Method(1,"方法1");
+        Method_Serializable method = new Method_Serializable(1,"方法1");
         oos.writeObject(method);
         oos.close();
     }

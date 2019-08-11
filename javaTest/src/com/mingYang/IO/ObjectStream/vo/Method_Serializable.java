@@ -20,7 +20,7 @@ import java.io.Serializable;
  *      被transient修饰成员变量，不能被序列化
  *
  */
-public class Method implements Serializable {
+public class Method_Serializable implements Serializable {
     //使用该serialVersionUID能够确保每次序列化的时候都是这个对象，不声明的话，每次修改该文件，class文件中serialVersionUID都是在变化的。
     private static final long serialVersionUID=1L;
 
@@ -29,17 +29,17 @@ public class Method implements Serializable {
     //private transient int id;
     private String name;
 
-    public Method() {
+    public Method_Serializable() {
     }
 
-    public Method(int id, String name) {
+    public Method_Serializable(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Method{" +
+        return "Method_Serializable{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

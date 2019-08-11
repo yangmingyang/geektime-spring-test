@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 
 /**
  *  3.在程序使用（解析）注解
- *      1.获取注解定义的位置对象 （class,Method,Field）
+ *      1.获取注解定义的位置对象 （class,Method_Serializable,Field）
  *      2.获取指定的注解
  *          getAnnotation(class)：其实就是在内存中生成了一个该注解的子类实现对象。
  *          注意：我们实际上定义注解只是注意了一个抽象方法而已，但在实际使用的过程中，jvm会自动帮我们创建一个该子类的实现对象。
