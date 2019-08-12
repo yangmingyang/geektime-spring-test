@@ -39,9 +39,33 @@ import java.sql.Statement;
  *              }
  *              注意：mysql5之后的驱动jar包可以省略注册驱动的步骤。原因是jar包下的META-INF/services/java.sql.Driver文件中已经加载"com.mysql.jdbc.Driver"
  *              b.获取数据库连接。
+ *                  方法：static Connection getConnection(String url,String user, String password)
+ *                  参数：
+ *                      url:指定连接的路径
+ *                          语法：jdbc:mysql://ip地址（域名）:端口号/数据库名称
+ *                          例子：jdbc:mysql://localhost:3306/english
+ *                          细节:如果连接的是本机mysql服务器，并且mysql服务器默认端口是3306，
+ *                               则url可以简写为：jdbc:mysql:///english
+ *                      user:用户名
+ *                      password:密码
  *
  *      2.Connection:数据库连接对象
+ *          功能：
+ *              1.获取执行sql的对象
+ *                  Statement createStatement()
+ *                  PreparedStatement prepareStatement(String sql)
+ *              2.管理事务：
+ *                  开启事务：setAutoCommit(boolean autoCommit):调用该方法设置参数为false，即开启事务。
+ *                  提交事务：commit()
+ *                  回滚事务：rollback()
+ *
  *      3.Statement:执行sql的对象
+ *          1.执行sql
+ *              1.boolean execute(String sql): 可以执行任意的sql （了解即可）
+ *              2.int executeUpdate(String sql)：执行DML(insert、update、delete)语句、DDL(create、alter、drop)语句。
+ *                  返回值:影响的行数，可以通过这个影响的行数判断DML语句是否执行成功 返回值>0的则执行成功，反之，则失败。
+ *              3.ResultSet executeQuery(String sql)：执行DQL(select)语句
+ *
  *      4.ResultSet:结果集对象
  *      5.PreparedStatement:执行sql的对象
  */
