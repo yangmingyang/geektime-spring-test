@@ -67,6 +67,12 @@ import java.sql.Statement;
  *              3.ResultSet executeQuery(String sql)：执行DQL(select)语句
  *
  *      4.ResultSet:结果集对象
+ *          next():游标向下移动一行。
+ *          getXxx(参数)：获取数据
+ *              Xxx:代表数据类型 如：int getInt() , String getString()
+ *              参数：
+ *                  1.int:代表列的编号，从1开始   如：getString(1)
+ *                  2.String:代表列名称。 如： getDouble("balance")
  *      5.PreparedStatement:执行sql的对象
  */
 public class Demo01JDBC {
