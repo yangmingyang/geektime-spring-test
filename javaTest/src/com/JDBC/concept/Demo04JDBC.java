@@ -21,8 +21,10 @@ public class Demo04JDBC {
         Connection conn = null;
         List<Student> studentList = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql:///english", "root", "root");
+            //Class.forName("com.mysql.jdbc.Driver");
+            //conn = DriverManager.getConnection("jdbc:mysql:///english", "root", "root");
+            //调用工具类
+            conn = JDBCUtils.getConnection();
             stat = conn.createStatement();
             String sql="select * from student";
             resultSet = stat.executeQuery(sql);
@@ -38,12 +40,10 @@ public class Demo04JDBC {
                 student.setAge(age);
                 studentList.add(student);
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
-            if (resultSet!=null){
+            /*if (resultSet!=null){
                 try {
                     resultSet.close();
                 } catch (SQLException e) {
@@ -63,7 +63,9 @@ public class Demo04JDBC {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-            }
+            }*/
+            //直接调用工具类
+            JDBCUtils.close(conn,stat,resultSet);
         }
         return studentList;
     }
