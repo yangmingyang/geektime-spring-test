@@ -27,6 +27,10 @@ public class DruidUtils {
         }
     }
 
+    public static DataSource getDataSource(){
+        return ds;
+    }
+
     /**
      * 获取connection对象
      */
