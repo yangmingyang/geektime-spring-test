@@ -8,7 +8,7 @@ package com.grammar2.G03_interface;
  *  注意事项；
  *      1.多个父接口当中的抽象方法如果重复，没有关系。
  *      2.多个父接口当中的默认方法如果重复，那么子接口必须进行默认方法的覆盖重写，【而且带着default关键字】。
- * 
+ *
  */
 public class Demo08_interface_relations {
 }
