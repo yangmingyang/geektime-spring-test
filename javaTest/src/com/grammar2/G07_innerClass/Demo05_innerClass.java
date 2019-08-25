@@ -38,7 +38,7 @@ public class Demo05_innerClass {
         };
         obj.method();
         obj.method2();
-        
+
         System.out.println("=========================");
 
          new MyInterface() {
