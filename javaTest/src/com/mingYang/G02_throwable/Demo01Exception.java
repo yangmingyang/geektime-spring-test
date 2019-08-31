@@ -31,7 +31,7 @@ public class Demo01Exception {
         //该方法就是直接把异常抛出去给虚拟机，程序不能再往下运行
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
         //该时间有错误
-        //Date d = sdf.parse("2039-333");
+        //G02_Date d = sdf.parse("2039-333");
         Date d = sdf.parse("2019-07-27");
         System.out.println(d);
         System.out.println("有异常，程序不能继续执行");
@@ -41,7 +41,7 @@ public class Demo01Exception {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
         try {
             Date d = sdf.parse("2039-333");
-            //Date d = sdf.parse("2019-07-27");
+            //G02_Date d = sdf.parse("2019-07-27");
             System.out.println(d);
         } catch (ParseException e) {
             e.printStackTrace();
