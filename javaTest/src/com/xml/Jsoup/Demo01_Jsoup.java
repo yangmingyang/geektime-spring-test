@@ -29,8 +29,30 @@ import java.net.URL;
  *          Elements getElementsByAttributeValue(String key, String value)；根据对应的属性名和属性值获取元素对象集合。
  *
  *      3.Elements：元素Element对象的集合。可以当做ArrayList<Element>来使用。
+ *
  *      4.Element：元素对象。
+ *          1.获取子元素对象
+ *              Element getElementById(String id)：根据id属性值获取唯一的element对象。
+ *              Elements getElementsByTag(String tagName)：根据标签名称获取元素对象集合。
+ *              Elements getElementsByAttribute(String key)：根据属性名称获取元素对象集合。
+ *              Elements getElementsByAttributeValue(String key, String value)；根据对应的属性名和属性值获取元素对象集合
+ *          2.获取属性值
+ *              String attr(String key)：根据属性名称获取属性值
+ *          3.获取文本内容
+ *              String text()：获取文本内容
+ *              String html()：获取标签体的所有内容（包括子标签的字符串内容）
+ *
  *      5.Node：节点对象。
+ *          是Document和Element的父类。
+ *
+ *  快速查询方法：
+ *      1.selector：选择器
+ *          使用方法：Elements select(String cssQuery)
+ *              语法：参考Selector类中定义的语法
+ *
+ *      2.XPath：XPath即为XML路径语言（XML Path Language），它是一种用来确定XML文档中某部分位置的语言。
+ *          使用Jsoup的Xpath需要额外的导入jar包。
+ *          查询w3cshool参考手册，使用Xpath的语法完成查询。
  *
  */
 public class Demo01_Jsoup {

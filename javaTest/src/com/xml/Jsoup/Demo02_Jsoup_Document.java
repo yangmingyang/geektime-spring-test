@@ -16,7 +16,7 @@ import java.io.IOException;
  *      Elements getElementsByAttribute(String key)：根据属性名称获取元素对象集合。
  *      Elements getElementsByAttributeValue(String key, String value)；根据对应的属性名和属性值获取元素对象集合。
  */
-public class Demo02_Jsoup {
+public class Demo02_Jsoup_Document {
     @Test
     public void demo01() throws IOException {
         String path = Demo01_Jsoup.class.getClassLoader().getResource("student.xml").getPath().toString();
