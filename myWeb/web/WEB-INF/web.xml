@@ -13,4 +13,14 @@
         <servlet-name>demo01</servlet-name>
         <url-pattern>/demo</url-pattern>
     </servlet-mapping>
+
+    <!--配置一个servlet-->
+    <servlet>
+        <servlet-name>demo02</servlet-name>
+        <servlet-class>cn.mingyang.web.servlet.ServletDemo02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo02</servlet-name>
+        <url-pattern>/demo2</url-pattern>
+    </servlet-mapping>
 </web-app>

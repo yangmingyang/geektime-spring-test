@@ -39,7 +39,7 @@ public class ServletDemo01 implements Servlet {
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException,
             IOException {
         //该方法每次请求都会被执行
-        System.out.printf("I am coming");
+        System.out.println("I am coming");
     }
 
     @Override
