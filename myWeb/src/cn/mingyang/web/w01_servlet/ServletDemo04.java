@@ -1,4 +1,4 @@
-package cn.mingyang.web.servlet;
+package cn.mingyang.web.w01_servlet;
 
 /**
  *  IDEA与Tomcat的相关配置

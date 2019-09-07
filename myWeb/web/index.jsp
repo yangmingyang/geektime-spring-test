@@ -11,6 +11,9 @@
     <title>欢迎来到我的页面</title>
   </head>
   <body>
-  come in
+  <form action="/demo5" method="post">
+    <input name="userName" />
+    <input type="submit" value="提交"/>
+  </form>
   </body>
 </html>

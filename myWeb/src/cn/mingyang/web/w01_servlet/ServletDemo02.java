@@ -1,4 +1,4 @@
-package cn.mingyang.web.servlet;
+package cn.mingyang.web.w01_servlet;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.io.IOException;
  *          Servlet什么时候被创建？
  *              默认情况下，第一次被访问时，Servlet被创建
  *              可以配置执行Servlet的创建时机。
- *                  在<servlet>标签下配置
+ *                  在<w01_servlet>标签下配置
  *                      1.第一次被访问时，创建
  *                          <load-on-startup>的值为负数
  *                      2.在服务器启动时，创建

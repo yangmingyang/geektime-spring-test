@@ -1,7 +1,6 @@
-package cn.mingyang.web.servlet;
+package cn.mingyang.web.w01_servlet;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
 /**
@@ -29,7 +28,8 @@ public class ServletDemo03 implements Servlet {
     }
 
     @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException,
+            IOException {
         System.out.println("servlet3.0以上版本我来了");
     }
 
