@@ -1,3 +1,5 @@
 /javaTest/out
 /javaTest/.idea
 /myWeb/.idea
+/javaTest/*.iml
+/myWeb/.iml
