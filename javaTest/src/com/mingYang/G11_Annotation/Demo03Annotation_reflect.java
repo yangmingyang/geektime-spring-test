@@ -21,7 +21,7 @@ public class Demo03Annotation_reflect {
      */
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException {
         //需要先读取注解中的值，怎么获取注解中的值呢？
-        //利用方式的方法，先获取反射类字节码对象
+        //利用反射的方法，先获取反射类字节码对象
         Class<Demo03Annotation_reflect> cls = Demo03Annotation_reflect.class;
         Pro pro = cls.getAnnotation(Pro.class);
         String className = pro.className();
