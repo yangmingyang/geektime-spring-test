@@ -5,7 +5,7 @@ package com.mingYang.G11_Annotation;
  *      概念：说明程序的。给计算机看的。
  *      注释：用文字描述程序。给程序员看的。
  *
- *      定义：注解（G11_Annotation），也叫元数据。一种代码级别的说明。它是JDK1.5及以后版本引入的一个特性，与类、接口、
+ *      定义：注解（Annotation），也叫元数据。一种代码级别的说明。它是JDK1.5及以后版本引入的一个特性，与类、接口、
  *            枚举是在同一个层次。它可以声明在包、类、字段、方法、局部变量、方法参数等的前面，用来对这些元素进行说明，注释。
  *      概念描述：
  *          1.JDK1.5之后的新特性。
@@ -31,7 +31,7 @@ package com.mingYang.G11_Annotation;
  *                  属性列表；
  *              }
  *          本质：注解本质上就是一个接口，该接口默认继承Annotation接口
- *              public interface MyAnnotation extends java.lang.annotation.G11_Annotation{ }
+ *              public interface MyAnnotation extends java.lang.annotation.Annotation{ }
  *          属性：接口中抽象方法
  *              要求：
  *                  1.属性的返回值类型有下列取值
