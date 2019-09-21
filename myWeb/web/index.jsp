@@ -11,9 +11,7 @@
     <title>欢迎来到我的页面</title>
   </head>
   <body>
-  <form action="/demo5" method="post">
-    <input name="userName" />
-    <input type="submit" value="提交"/>
-  </form>
+  <a href="/request02">/request02</a><br>
+  <a href="/Demo02_response_sendRedirect">/Demo02_response_sendRedirect</a>
   </body>
 </html>
