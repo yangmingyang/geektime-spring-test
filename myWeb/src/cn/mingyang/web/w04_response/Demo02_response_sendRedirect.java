@@ -37,8 +37,48 @@ import java.io.IOException;
  *
  *                  面试有时候会问：forward 和 redirect 区别？
  *
+ *          路径写法：
+ *              1.路径分类：
+ *                  1.相对路径：通过相对路径不可以确定唯一资源
+ *                      如：./index.html
+ *                      不可以/开头，以.开头路径
+ *
+ *                      规则；找到当前资源和目标资源之间的相对位置关系
+ *  *                      ./：当前目录
+ *  *                      ../：后退一级目录
+ *
+ *                  2.绝对路径：通过绝对路径可以确定唯一资源
+ *                      如：http://localhost/myWeb/responseDemo1     /myWeb/responseDemo1
+ *                      以/开头的路径
+ *
+ *                      规则：判断定义的路径是给谁用的？判断请求将来从哪里发出
+ *                          给客户端浏览器使用：需要加虚拟目录（项目的访问路径）
+ *                              建议虚拟目录动态获取：request.getContextPath()
+ *
+ *                          给服务器使用：不需要加虚拟目录
+ *                              转发路径
+ *
  *          2.服务器输出字符串数据到浏览器
+ *              步骤：
+ *                  1.获取字符输出流
+ *                  2.输出数据
+ *
+ *              注意：
+ *                  乱码问题：
+ *                      1.PrintWriter pw = response.getWriter();获取的流的默认编码是ISO-8859-1
+ *                      2.设置该流的默认编码
+ *                      3.告诉浏览器响应体使用的编码
+ *
+ *                      //简单的形式，设置编码，是在获取流之前设置
+ *                      response.setContentType("text/html;charset=utf-8");
+ *
+ *              案例实现：/Demo04_response_writer
+ *
  *          3.服务器输出字节数据到浏览器
+ *              步骤：
+ *                  1.获取字节输出流
+ *                  2.输出数据
+ *
  *          4.验证码
  */
 @WebServlet("/Demo02_response_sendRedirect")
