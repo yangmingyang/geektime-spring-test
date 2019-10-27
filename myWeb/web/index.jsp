@@ -12,6 +12,8 @@
   </head>
   <body>
   <a href="/request02">/request02</a><br>
-  <a href="/Demo02_response_sendRedirect">/Demo02_response_sendRedirect</a>
+  <a href="/Demo02_response_sendRedirect" target="_blank">/Demo02_response_sendRedirect</a><br>
+  <a href="/demo01_servletContext" target="_blank">/demo01_servletContext</a><br>
+  <a href="/demo02_servletContext" target="_blank">/demo02_servletContext</a><br>
   </body>
 </html>
