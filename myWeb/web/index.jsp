@@ -15,5 +15,7 @@
   <a href="/Demo02_response_sendRedirect" target="_blank">/Demo02_response_sendRedirect</a><br>
   <a href="/demo01_servletContext" target="_blank">/demo01_servletContext</a><br>
   <a href="/demo02_servletContext" target="_blank">/demo02_servletContext</a><br>
+  <a href="/Demo03_servletContext_download?fileName=01.jpg">/Demo03_servletContext_download下载图片</a><br>
+  <a href="/Demo03_servletContext_download?fileName=02.text">/Demo03_servletContext_download下载文本</a><br>
   </body>
 </html>
