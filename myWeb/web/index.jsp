@@ -17,5 +17,7 @@
   <a href="/demo02_servletContext" target="_blank">/demo02_servletContext</a><br>
   <a href="/Demo03_servletContext_download?fileName=01.jpg">/Demo03_servletContext_download下载图片</a><br>
   <a href="/Demo03_servletContext_download?fileName=02.text">/Demo03_servletContext_download下载文本</a><br>
+  <a href="/demo01_cookie">/demo01_cookie设置值</a><br>
+  <a href="/demo02_cookie">/demo02_cookie获取值</a><br>
   </body>
 </html>
