@@ -7,10 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Random;
 
 @WebServlet("/demo06_response_checkCode")
 public class Demo06_response_checkCode extends HttpServlet {
@@ -43,7 +45,14 @@ public class Demo06_response_checkCode extends HttpServlet {
         graphics.drawString("A",20,25);
         graphics.drawString("b",40,25);
         graphics.drawString("c",60,25);
-        graphics.drawString("d",80,25);
+        //创建Random类对象
+        Random random = new Random();
+        //产生随机数,100内的随机数
+        int number = random.nextInt(100);
+        graphics.drawString(number+"",80,25);
+        HttpSession session = req.getSession();
+        session.setAttribute("checkCodeSession","Abc"+number);
+        System.out.println("checkCodeSession：" + "Abc"+number);
 
         //画随机线,这里可以用随机数
         graphics.drawLine(0,0,30,30);
