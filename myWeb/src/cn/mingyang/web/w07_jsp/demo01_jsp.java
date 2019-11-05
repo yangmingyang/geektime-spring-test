@@ -21,7 +21,7 @@ JSP：入门学习
             request
             response
             out：字符输出流对象。可以将数据输出到页面上。和response.getWriter()类似
-                respnse.getWriter()和out.write()的区别：
+                response.getWriter()和out.write()的区别：
                     在Tomcat服务器真正给客户端做出响应之前，会先找response缓冲区数据，再找out缓冲区数据。
                     response.getWriter()数据输出永远在out.write()之前
  */
