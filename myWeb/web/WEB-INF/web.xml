@@ -44,4 +44,9 @@
         &lt;!&ndash;拦截的路径&ndash;&gt;
         <url-pattern>/*</url-pattern>
     </filter-mapping>-->
+
+    <!--配置一个监听器-->
+    <listener>
+        <listener-class>cn.mingyang.web.w10_listener.demo01_listener</listener-class>
+    </listener>
 </web-app>
