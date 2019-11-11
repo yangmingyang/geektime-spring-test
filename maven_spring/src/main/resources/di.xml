@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+    1.使用构造函数注入
+    使用的标签：constructor-arg
+    标签出现的位置：bean标签的内部
+    标签中的属性
+        type：用于指定要注入的数据的数据类型，该数据类型也是构造函数中某个或某些参数的类型。
+        index：用于指定要注入的数据给构造函数中指定索引位置的参数赋值。索引的位置是从0开始。
+        name：用于指定给构造函数中指定名称的参数赋值。
+        value：用于提供基本类型和String类型的数据。
+        ref：用于指定其他的bean类型数据。它指的就是在spring的IOC核心容器中出现过的bean对象。
+    优点：
+        在获取bean对象时，注入数据是必须的操作，否则对象无法创建成功。
+    弊端：
+        改变了bean对象的实例化方法，使我们在创建对象时，如果用不到这些数据，也必须提供。-->
+    <bean id="studentService" class="com.mego.w01_bean.service.impl.StudentServiceImpl">
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="name" value="名扬"></constructor-arg>
+        <constructor-arg name="birthDate" ref="new"></constructor-arg>
+    </bean>
+    <bean id="new" class="java.util.Date"></bean>
+
+
+    <!--
+    2.set方法注入
+    涉及的标签：property
+    出现的位置：bean标签的内部。
+    标签的属性
+    name：用于指定注入时所调用的set方法名称。
+    value：用于提供基本类型和String类型的数据。
+    ref：用于指定其他的bean类型数据。它指的就是在spring的IOC核心容器中出现过的bean对象。
+    优势：
+    创建对象时没有明确的限制，可以直接使用默认构造函数。
+    弊端：
+    如果有某个成员必须有值，则获取对象是由可能set方法没有执行。-->
+    <bean id="studentService2" class="com.mego.w01_bean.service.impl.StudentServiceImpl2">
+        <property name="id" value="1"></property>
+        <property name="name" value="小明"></property>
+        <property name="birthDate" ref="new"></property>
+    </bean>
+
+
+    <!--
+    3.复杂类型的注入/结合类型的注入
+        用于给List结构集合煮的标签
+            list    array   set
+        用于给Map结构集合注入的标签
+            map     props
+    总结：结构相同，标签可以互换-->
+    <bean id="studentService3" class="com.mego.w01_bean.service.impl.StudentServiceImpl3">
+        <property name="myStrs">
+            <array>
+                <value>array1</value>
+                <value>array2</value>
+                <value>array3</value>
+            </array>
+        </property>
+        <property name="myList">
+            <list>
+                <value>list1</value>
+                <value>list2</value>
+                <value>list3</value>
+            </list>
+        </property>
+        <property name="mySet">
+            <set>
+                <value>set1</value>
+                <value>set2</value>
+                <value>set3</value>
+            </set>
+        </property>
+        <!--两种不同的结构-->
+        <!--<property name="myMap">
+            <map>
+                <entry key="test1" value="小炮"></entry>
+                <entry key="test2">
+                    <value>小李</value>
+                </entry>
+            </map>
+        </property>
+        <property name="myProps">
+            <props>
+                <prop key="pro1">米米</prop>
+                <prop key="pro2">红红</prop>
+            </props>
+        </property>-->
+        <!--两种不同的结构，他们可以互换里面的标签，所以说，只要记住 结构相同，标签可以互换，上面list集合也一样-->
+        <property name="myMap">
+            <props>
+                <prop key="test1">米米</prop>
+                <prop key="test2">红红</prop>
+            </props>
+        </property>
+        <property name="myProps">
+            <map>
+                <entry key="pro1" value="小炮"></entry>
+                <entry key="pro2">
+                    <value>小李</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>
