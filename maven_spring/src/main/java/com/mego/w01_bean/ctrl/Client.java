@@ -1,4 +1,4 @@
-package com.mego.w01_bean.ui;
+package com.mego.w01_bean.ctrl;
 
 import com.mego.w01_bean.dao.Account;
 import com.mego.w01_bean.service.impl.AccountServiceImpl;
