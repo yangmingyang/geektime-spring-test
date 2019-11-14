@@ -17,4 +17,12 @@ public class HobbyWordCtrl {
             System.out.println(word);
         }
     }
+
+    @Test
+    public void test02(){
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("case.xml");
+        HobbyWordService hobbyWordService = (HobbyWordService) classPathXmlApplicationContext.getBean("hobbyWordService");
+        Hobby_word hobbyWord = hobbyWordService.getHobbyWord();
+        System.out.println(hobbyWord);
+    }
 }

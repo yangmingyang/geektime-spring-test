@@ -22,4 +22,16 @@ public class HobbyWordDaoImpl implements HobbyWordDao {
         }
         return null;
     }
+
+    public Hobby_word getHobbyWord() {
+        try {
+            List<Hobby_word> list = queryRunner.query("select * from hobby_word where id=?", new BeanListHandler<Hobby_word>(Hobby_word.class), 10);
+            if (list != null) {
+                return list.get(0);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

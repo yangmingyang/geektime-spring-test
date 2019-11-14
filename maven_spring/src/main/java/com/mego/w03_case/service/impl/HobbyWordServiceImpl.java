@@ -5,7 +5,6 @@ import com.mego.w03_case.domain.Hobby_word;
 import com.mego.w03_case.service.HobbyWordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -18,4 +17,10 @@ public class HobbyWordServiceImpl implements HobbyWordService {
     public List<Hobby_word> findAllWord() {
         return hobbyWordDao.findAllWord();
     }
+
+    public Hobby_word getHobbyWord() {
+        Hobby_word hobbyWord = hobbyWordDao.getHobbyWord();
+        return hobbyWord;
+    }
+
 }

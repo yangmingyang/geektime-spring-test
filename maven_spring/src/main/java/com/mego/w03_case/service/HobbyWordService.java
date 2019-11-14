@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface HobbyWordService {
     public List<Hobby_word> findAllWord();
+
+    public Hobby_word getHobbyWord();
 }

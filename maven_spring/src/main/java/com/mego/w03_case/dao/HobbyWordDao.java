@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface HobbyWordDao {
     public List<Hobby_word> findAllWord();
+
+    Hobby_word getHobbyWord();
 }
