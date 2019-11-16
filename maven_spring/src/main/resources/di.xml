@@ -34,9 +34,9 @@
     value：用于提供基本类型和String类型的数据。
     ref：用于指定其他的bean类型数据。它指的就是在spring的IOC核心容器中出现过的bean对象。
     优势：
-    创建对象时没有明确的限制，可以直接使用默认构造函数。
+        创建对象时没有明确的限制，可以直接使用默认构造函数。
     弊端：
-    如果有某个成员必须有值，则获取对象是由可能set方法没有执行。-->
+        如果有某个成员必须有值，则获取对象是由可能set方法没有执行。-->
     <bean id="studentService2" class="com.mego.w01_bean.service.impl.StudentServiceImpl2">
         <property name="id" value="1"></property>
         <property name="name" value="小明"></property>
