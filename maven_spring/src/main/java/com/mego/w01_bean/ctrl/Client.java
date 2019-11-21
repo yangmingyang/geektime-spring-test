@@ -44,8 +44,8 @@ public class Client {
 
          */
         //获取springIoc的核心容器，并根据bean名称获取对应的对象
-        //ApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");
-        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("D:\\code\\myselfCode\\geektime-spring-test\\maven_spring\\src\\main\\resources\\bean.xml");
+        //ApplicationContext applicationContext = new ClassPathXmlApplicationContext("w01_bean.xml");
+        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("D:\\code\\myselfCode\\geektime-spring-test\\maven_spring\\src\\main\\resources\\w01_bean.xml");
         Account account = (Account) applicationContext.getBean("account");
         account.setId(1);
         account.setName("mingYang");
@@ -59,7 +59,7 @@ public class Client {
 
     @Test
     public void beanFactoryTest(){
-        Resource resource = new ClassPathResource("bean.xml");
+        Resource resource = new ClassPathResource("w01_bean.xml");
         BeanFactory beanFactory = new XmlBeanFactory(resource);
         Account account = (Account) beanFactory.getBean("account");
         System.out.println(account);
@@ -148,7 +148,7 @@ public class Client {
     @Test
     public void beanTest02(){
         //第二种：使用普通工厂中的方法创建对象（使用某个类中的方法创建对象，并存入spring容器）
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("w01_bean.xml");
         AccountServiceImpl accountService1 = (AccountServiceImpl)applicationContext.getBean("accountService1");
         System.out.println(accountService1);
     }
@@ -156,7 +156,7 @@ public class Client {
     @Test
     public void beanTest03(){
         // 第三种：使用工厂中的静态方法创建对象（使用某个类中的静态方法创建对象，并存入spring容器）
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("w01_bean.xml");
         AccountServiceImpl accountService2 = (AccountServiceImpl)applicationContext.getBean("accountService2");
         System.out.println(accountService2);
     }
@@ -178,7 +178,7 @@ public class Client {
          弊端：
             改变了bean对象的实例化方法，使我们在创建对象时，如果用不到这些数据，也必须提供。
          */
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("di.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w01_di.xml");
         StudentServiceImpl studentServiceImpl = (StudentServiceImpl) classPathXmlApplicationContext.getBean("studentService");
         studentServiceImpl.saveStudent();
     }
@@ -199,7 +199,7 @@ public class Client {
          弊端：
             如果有某个成员必须有值，则获取对象是由可能set方法没有执行。
          */
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("di.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w01_di.xml");
         StudentServiceImpl2 studentServiceImpl = (StudentServiceImpl2) classPathXmlApplicationContext.getBean("studentService2");
         studentServiceImpl.saveStudent();
     }
@@ -214,7 +214,7 @@ public class Client {
                  map     props
          总结：结构相同，标签可以互换
          */
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("di.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w01_di.xml");
         StudentServiceImpl3 studentServiceImpl = (StudentServiceImpl3) classPathXmlApplicationContext.getBean("studentService3");
         studentServiceImpl.saveStudent();
     }

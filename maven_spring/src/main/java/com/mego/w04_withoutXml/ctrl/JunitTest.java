@@ -40,9 +40,11 @@ import java.util.List;
         @ContextConfiguration
             locations：指定xml文件的位置，加上classpath关键字，表示在类路径下
             classes：指定注解类所在的位置。
+    当我们使用spring5.x版本的时候，要求junit的jar必须是4.12及以上。
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SpringConfiguration.class)
+//@ContextConfiguration(locations = "classpath:w03_case.xml")
 public class JunitTest {
     @Autowired
     HobbyWordService hobbyWordService;

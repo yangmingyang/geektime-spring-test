@@ -10,7 +10,7 @@ import java.util.List;
 public class HobbyWordCtrl {
     @Test
     public void test01(){
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("case.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w03_case.xml");
         HobbyWordService hobbyWordService = (HobbyWordService) classPathXmlApplicationContext.getBean("hobbyWordService");
         List<Hobby_word> wordList = hobbyWordService.findAllWord();
         for (Hobby_word word : wordList){
@@ -20,7 +20,7 @@ public class HobbyWordCtrl {
 
     @Test
     public void test02(){
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("case.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w03_case.xml");
         HobbyWordService hobbyWordService = (HobbyWordService) classPathXmlApplicationContext.getBean("hobbyWordService");
         Hobby_word hobbyWord = hobbyWordService.getHobbyWord();
         System.out.println(hobbyWord);

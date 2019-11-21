@@ -12,7 +12,7 @@ import java.util.List;
 public class HobbyWordCtrl {
     @Test
     public void test01(){
-        //ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("case.xml");
+        //ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w03_case.xml");
         //HobbyWordService hobbyWordService = (HobbyWordService) classPathXmlApplicationContext.getBean("hobbyWordService");
 
         //使用AnnotationConfigApplicationContext类来加载配置类
@@ -26,7 +26,7 @@ public class HobbyWordCtrl {
 
     @Test
     public void test02(){
-        /*ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("case.xml");
+        /*ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w03_case.xml");
         HobbyWordService hobbyWordService = (HobbyWordService) classPathXmlApplicationContext.getBean("hobbyWordService");*/
 
         //使用AnnotationConfigApplicationContext类来加载配置类

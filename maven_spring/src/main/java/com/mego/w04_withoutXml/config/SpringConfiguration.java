@@ -39,7 +39,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 @ComponentScan("com.mego")
 @Import(JdbcConfig.class)
-@PropertySource("classpath:jdbcConfig.properties")
+@PropertySource("classpath:w04_jdbcConfig.properties")
 public class SpringConfiguration {
     /**
         该配置类是实现了resources下case.xml一样的功能

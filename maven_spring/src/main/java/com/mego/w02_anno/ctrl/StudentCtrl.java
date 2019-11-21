@@ -68,7 +68,7 @@ public class StudentCtrl {
     @Test
     public void test01(){
         // 1.注解
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("anno.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w02_anno.xml");
         StudentServiceImpl studentServiceImpl1 = (StudentServiceImpl) classPathXmlApplicationContext.getBean("studentServiceImpl");
         studentServiceImpl1.saveStudent();
 
@@ -80,7 +80,7 @@ public class StudentCtrl {
     @Test
     public void test02(){
         //2.用于注入数据
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("anno.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w02_anno.xml");
         StudentServiceImpl2 studentService2 = classPathXmlApplicationContext.getBean("studentService2", StudentServiceImpl2.class);
         studentService2.saveStudent();
         classPathXmlApplicationContext.close();
