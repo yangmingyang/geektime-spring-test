@@ -8,5 +8,9 @@ import java.util.List;
     该类主要是用来直接操作数据库
  */
 public interface AccountDaoService {
-    public List<Account> findAllAccount();
+    List<Account> findAllAccount();
+
+    void update(Integer id ,double balance);
+
+    Account getAccount(String name);
 }

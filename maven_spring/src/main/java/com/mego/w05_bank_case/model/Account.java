@@ -1,12 +1,32 @@
 package com.mego.w05_bank_case.model;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable {
     private Integer id;
+    /**
+     * 名称
+     */
     private String name;
+    /**
+     * 余额
+     */
     private Double balance;
-    Account(){
-        System.out.println("创建Account对象了");
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                '}';
     }
+
+    /**
+     * 空的构造参数不要顺便写其他东西，比如就直接输出一句打印话就完事
+     */
+
+
 
     public Integer getId() {
         return id;

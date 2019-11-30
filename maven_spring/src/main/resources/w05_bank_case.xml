@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--配置QueryRunner-->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+    </bean>
+    <!-- 配置数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--连接数据库的信息-->
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/english"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="root"></property>
+    </bean>
+
+    <bean id="accountService" class="com.mego.w05_bank_case.service.impl.AccountServiceImpl">
+        <!--通过set方法 注入accountDaoService对象-->
+        <property name="accountDaoService" ref="accountDaoService"></property>
+        <property name="txManager" ref="txManager"></property>
+    </bean>
+
+    <bean id="accountDaoService" class="com.mego.w05_bank_case.dao.impl.AccountDaoServiceImpl">
+       <!-- 注入runner对象 -->
+        <property name="queryRunner" ref="runner"></property>
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+
+    <bean id="connectionUtils" class="com.mego.w05_bank_case.utils.ConnectionUtils">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <bean id="txManager" class="com.mego.w05_bank_case.utils.TransactionManager">
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+</beans>
