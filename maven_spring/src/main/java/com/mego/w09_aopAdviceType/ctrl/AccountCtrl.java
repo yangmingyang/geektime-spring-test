@@ -1,6 +1,6 @@
-package com.mego.w08_springAop.ctrl;
+package com.mego.w09_aopAdviceType.ctrl;
 
-import com.mego.w08_springAop.service.AccountService;
+import com.mego.w09_aopAdviceType.service.AccountService;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,10 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AccountCtrl {
     @Test
     public void test01(){
-        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w08_springAop.xml");
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w09_aopAdviceType.xml");
         AccountService accountService = (AccountService) classPathXmlApplicationContext.getBean("accountService");
         accountService.saveAccount();
-        accountService.updateAccount(1);
-        accountService.deleteAccount();
     }
 }
