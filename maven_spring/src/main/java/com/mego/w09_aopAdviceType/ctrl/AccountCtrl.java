@@ -12,4 +12,12 @@ public class AccountCtrl {
         AccountService accountService = (AccountService) classPathXmlApplicationContext.getBean("accountService");
         accountService.saveAccount();
     }
+
+    @Test
+    public void test02(){
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("w09_1_aopAdviceType.xml");
+        AccountService accountService = (AccountService) classPathXmlApplicationContext.getBean("accountService");
+        accountService.saveAccount();
+    }
+
 }
